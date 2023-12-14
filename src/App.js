@@ -1,14 +1,19 @@
 import { useState } from "react";
 
 const api = {
-  key: "e8810468276983ffcf039ee331d5a392",
-  base: "http://api.openweathermap.org/data/2.5",
+  key: "7d4f151c7d97b3c9b10ce95280eac359",
+  base: "api.openweathermap.org/data/2.5",
 };
 
-
 function App() {
-
-  const { Search, setSearch } = useState("");
+  const [Search, setSearch] = useState("");
+  const searchPress = () => {
+    fetch(`${api.base}weather?q=${Search},&units=metric&APPID=${api.key}`)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+      });
+  };
 
   return (
     <div>
@@ -24,6 +29,7 @@ function App() {
           placeholder="search ..."
           onChange={(e) => setSearch(e.target.value)}
         />
+        <button onClick={searchPress}>Search</button>
       </div>
 
       {/* location */}
