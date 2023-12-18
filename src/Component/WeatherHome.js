@@ -20,7 +20,7 @@ function WeatherHome() {
   };
 
   return (
-    <div class="h-[645px] w-4/6 border-4 bg-slate-400 md:box-content bg-bg-weather_block rounded-3xl">
+    <div class="h-[645px] w-full border-4 bg-slate-400 md:box-content bg-bg-weather_block rounded-xl">
       <div className="flex items-center justify-center pt-12">
         <div className="w-3/6 h-10 bg-white rounded-3xl flex items-center ">
           <div
