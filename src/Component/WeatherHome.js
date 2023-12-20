@@ -42,7 +42,6 @@ function WeatherHome() {
           </div>
         </div>
       </div>
-
       <div>
         {typeof weather.main !== "undefined" ? (
           <div className="flex flex-col text-center items-center justify-center pt-4">
@@ -52,9 +51,7 @@ function WeatherHome() {
             </div>
 
             <div className="flex flex-row justify-between items-center">
-              <div className="h-10 w-10 bg-black ">
-                
-              </div>
+              <div className="h-10 w-10 bg-black "></div>
               <div className="text-4xl text-blue-500 font-bold">
                 {/* Temperature */}
                 <p>{weather.main.temp}°C</p>
